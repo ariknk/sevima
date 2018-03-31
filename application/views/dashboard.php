@@ -1,26 +1,26 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">My Course</h1>
+        <h3 class="page-body"></h3>
     </div>
     <!-- /.col-lg-12 -->
 </div>
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-primary">
-            <div class="panel-heading">
+            <div class="panel-body">
                 <div class="row">
                     <div class="col-xs-1">
                         <img src="#">
                     </div>
                     <div class="col-xs-9">
-                        <div>Iki Kelas</div>
-                        <div>Iki Kels br</div>
+                        <div>Nama Kelas</div>
+                        <div>Deskripsi kelas</div>
                     </div>
                 </div>
             </div>
-            <a href="#">
+            <a href="<?php echo base_url(); ?>index.php/course">
                 <div class="panel-footer">
-                    <span class="pull-left">View Course</span>
+                    <span class="pull-left">Lihat Kelas</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                     <div class="clearfix"></div>
                 </div>

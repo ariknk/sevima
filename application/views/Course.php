@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">My Course</h1>
+        <h1 class="page-header">Nama Kelas</h1>
+        <h5>Kode Kelas : </h5>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -20,13 +21,18 @@
             </div>
             <div class="panel-body">
             	<div class="form-group">
-            		<div> Materi basdbfmasdnbfnmdsabfmasbdmnfbsdmabfmbsddfbmsdbb </div>
-            		<a href="#"></a>
+            		<div > Materi basdbfmasdnbfnmdsabfmasbdmnfbsdmabfmbsddfbmsdbb </div>
+            		<div class="panel panel-primary">
+                        <div class="panel-footer">
+                            <h5>Nama Filenya bro</h5>
+                        </div>
+                    </div>
+                    <a href="" class="fa fa-download"></a>
             	</div>
             </div>
-            <a href="#">
+            <a href="<?php echo base_url(); ?>index.php/course/details">
                 <div class="panel-footer">
-                    <span class="pull-left">View Course</span>
+                    <span class="pull-left">Lihat Detail</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                     <div class="clearfix"></div>
                 </div>

@@ -5,10 +5,9 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$data['main_view'] = "Course";
+		$data['main_view'] = "dashboard";
 		$this->load->view('Template', $data);
 	}
-
 }
 
 /* End of file Home.php */

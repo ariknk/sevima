@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Classroom</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url();?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,29 +57,36 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search<?php echo base_url();?>assets.">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
+                        <?php 
+                            if ($this->session->userdata('level') == "mahasiswa") {
+                        ?>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> My Course </a>
+                            <a href="<?php echo base_url(); ?>index.php/home"><i class="fa fa-dashboard fa-fw"></i> Kelas </a>
                         </li>
                       
-                          <li>
-                            <a href="#" data-toggle="modal" data-target="#join_course"><i class="fa fa-dashboard fa-fw"></i> Join Kelas </a>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#join_course"><i class="fa fa-dashboard fa-fw"></i> Gabung Kelas </a>
                         </li>
 
-                           <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i>Logout  </a>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i>Logout </a>
                         </li>
-                       
+
+                        <?php 
+                            } else {
+                        ?>
+                        <li>
+                            <a href="<?php echo base_url(); ?>index.php/home"><i class="fa fa-dashboard fa-fw"></i> Kelas </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#add_course"><i class="fa fa-dashboard fa-fw"></i> Buat Kelas </a>
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i>Logout</a>
+                        </li>    
+                        <?php 
+                            }
+                        ?>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -101,7 +108,7 @@
             <div class="modal-content">
                 <form action="" method="post">
                     <div class="modal-header">
-                        <h4 class="modal-title">Insert Code</h4>
+                        <h4 class="modal-title">Masukan Kode Kelas</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
@@ -110,7 +117,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
-                        <input type="submit" class="btn btn-primary" name="submit" value="Join">
+                        <input type="submit" class="btn btn-primary" name="submit" value="Gabung">
                     </div>
                 </form>
             </div>
@@ -119,6 +126,33 @@
         <!-- /.modal-dialog -->
     </div>
 
+    <div class="modal fade" id="add_course" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="" method="post">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Tambah Kelas</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <h5>Nama Kelas</h5>
+                            <input type="text" name="judul" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <h5>Deskripsi</h5>
+                            <input type="text" name="deskripsi" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
+                        <input type="submit" class="btn btn-primary" name="submit" value="Buat">
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
     <!-- jQuery -->
     <script src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js"></script>
 
