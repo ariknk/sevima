@@ -106,7 +106,7 @@
     <div class="modal fade" id="join_course" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="" method="post">
+                <form action="<?php echo base_url(); ?>index.php/course/join_kelas" method="post">
                     <div class="modal-header">
                         <h4 class="modal-title">Masukan Kode Kelas</h4>
                     </div>
@@ -129,7 +129,7 @@
     <div class="modal fade" id="add_course" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="" method="post">
+                <form action="<?php echo base_url(); ?>index.php/course/buat_kelas" method="post">
                     <div class="modal-header">
                         <h4 class="modal-title">Tambah Kelas</h4>
                     </div>
